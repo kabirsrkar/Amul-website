@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amul - The Taste of India | Scroll Experience</title>
+  
+  <!-- Tailwind CSS CDN and config for Kool Gold sections -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons for Kool Gold sections -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#b80049",
+            "surface-container-highest": "#e9e1dc",
+            "on-error": "#ffffff",
+            "surface-variant": "#e9e1dc",
+            "primary-container": "#e2165f",
+            "tertiary-fixed-dim": "#cdc6b8",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#4b463c",
+            "surface-dim": "#e1d8d4",
+            "surface-bright": "#fff8f5",
+            "tertiary-fixed": "#e9e2d3",
+            "on-primary-container": "#fffbff",
+            "surface-container-low": "#fbf2ed",
+            "on-surface": "#1e1b18",
+            "primary-fixed-dim": "#ffb2be",
+            "on-secondary-fixed": "#241a00",
+            "secondary-fixed-dim": "#e9c349",
+            "surface-container-high": "#efe6e2",
+            "surface-container": "#f5ece7",
+            "secondary": "#735c00",
+            "outline-variant": "#e4bdc2",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary-container": "#fed65b",
+            "outline": "#8f6f73",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#ffb2be",
+            "surface-tint": "#bc004b",
+            "tertiary": "#605c50",
+            "background": "#fff8f5",
+            "on-secondary-fixed-variant": "#574500",
+            "on-surface-variant": "#5b3f43",
+            "inverse-surface": "#34302c",
+            "on-tertiary-container": "#fffbff",
+            "on-primary-fixed-variant": "#900038",
+            "on-tertiary-fixed": "#1e1b13",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#f8efea",
+            "surface": "#fff8f5",
+            "secondary-fixed": "#ffe088",
+            "on-background": "#1e1b18",
+            "tertiary-container": "#797468",
+            "on-secondary-container": "#745c00",
+            "primary-fixed": "#ffd9de",
+            "on-primary-fixed": "#400014"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "container-margin-desktop": "80px",
+            "section-gap": "120px",
+            "base": "8px",
+            "container-margin-mobile": "20px",
+            "gutter": "24px"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Bricolage Grotesque"],
+            "headline-lg": ["Bricolage Grotesque"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Bricolage Grotesque"]
+          },
+          fontSize: {
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Premium Preloader Overlay -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <span class="amul-brand">Amul</span>
+        <span class="tagline">The Taste of India</span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar-track">
+          <div id="progress-bar"></div>
+        </div>
+        <div class="progress-text"><span id="progress-percentage">0</span>% Loaded</div>
+      </div>
+      <p class="loader-status">Preloading the experience...</p>
+    </div>
+  </div>
+
+  <!-- Transparent Global Navbar -->
+  <nav class="global-navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-text">Amul</span>
+        <span class="dot">•</span>
+        <span class="header-tagline">Kool Gold</span>
+      </div>
+      <div class="nav-menu">
+        <a href="#sec-0" class="nav-link active" data-sec="story">The Story</a>
+        <a href="#benefits" class="nav-link" data-sec="benefits">Benefits</a>
+        <a href="#ingredients" class="nav-link" data-sec="ingredients">Ingredients</a>
+        <a href="#testimonials" class="nav-link" data-sec="testimonials">Testimonials</a>
+      </div>
+      <div class="nav-cta">
+        <button class="shop-btn">Shop Now</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll Animation Wrapper -->
+  <div class="scroll-animation-wrapper">
+    <!-- Sticky Canvas & Overlay UI Container -->
+    <div class="sticky-canvas-container">
+      <canvas id="animation-canvas"></canvas>
+      
+      <div class="overlay-ui">
+        <!-- Chevron scroll indicator at the bottom -->
+        <div class="scroll-prompt">
+          <span>Scroll down to begin</span>
+          <div class="chevron-wrapper">
+            <svg class="chevron" viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Side Chapter Navigation -->
+        <nav class="chapter-nav">
+          <div class="nav-dot active" data-target="0" title="The Beginning"></div>
+          <div class="nav-dot" data-target="1" title="The Cooperative"></div>
+          <div class="nav-dot" data-target="2" title="White Revolution"></div>
+          <div class="nav-dot" data-target="3" title="Utterly Butterly"></div>
+          <div class="nav-dot" data-target="4" title="The Legacy"></div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Scrollable Story Sections Overlay -->
+    <div class="story-overlay">
+      <!-- Section 1 -->
+      <section class="story-section" id="sec-0">
+        <div class="story-card text-left">
+          <span class="section-label">Chapter 01</span>
+          <h2>The Taste of India</h2>
+          <p>A journey through time celebrating India's favorite dairy. Relive the story that brought delicious goodness to every single home.</p>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="story-section" id="sec-1">
+        <div class="story-card text-right">
+          <span class="section-label">Chapter 02</span>
+          <h2>Born in Anand</h2>
+          <p>In 1946, a cooperative movement was born in Anand, Gujarat. It empowered small farmers and transformed the dairy industry forever.</p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="story-section" id="sec-2">
+        <div class="story-card text-left">
+          <span class="section-label">Chapter 03</span>
+          <h2>The White Revolution</h2>
+          <p>Under the visionary leadership of Dr. Verghese Kurien, Operation Flood turned India from a milk-deficient nation into the world's largest milk producer.</p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="story-section" id="sec-3">
+        <div class="story-card text-right">
+          <span class="section-label">Chapter 04</span>
+          <h2>Utterly Butterly Delicious</h2>
+          <p>From the iconic Amul Girl to witty topical ads, Amul became a part of India's cultural conversation, stealing hearts and spreading smiles.</p>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="story-section" id="sec-4">
+        <div class="story-card center">
+          <span class="section-label">Chapter 05</span>
+          <h2>A Golden Legacy</h2>
+          <p>For over 75 years, Amul has stood for trust, purity, and unmatched quality. A true national treasure, owned by the farmers of India.</p>
+          <button class="replay-btn" id="replay-btn">Scroll to Top</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Amul Kool Gold Exotic Rose Sections (Tailwind CSS styled) -->
+  <div class="kool-rose-section bg-[#FDF5E6] text-on-surface font-body-md antialiased relative z-20">
+    <main>
+      <!-- Benefits Section -->
+      <section id="benefits" class="py-section-gap px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Why Choose Exotic Rose?</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Discover the perfect blend of tradition and taste, crafted for those who appreciate the finer things.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Benefit 1 -->
+          <div class="glass-card rounded-xl p-8 flex flex-col items-center text-center transform transition-transform hover:-translate-y-2">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined text-4xl" data-icon="water_drop" data-weight="fill" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+            </div>
+            <h3 class="font-label-md text-label-md text-on-surface text-lg mb-2">Pure Milk Goodness</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Sourced from the finest dairy, providing essential nutrients and a rich, creamy texture.</p>
+          </div>
+          <!-- Benefit 2 -->
+          <div class="glass-card rounded-xl p-8 flex flex-col items-center text-center transform transition-transform hover:-translate-y-2 mt-0 md:mt-8">
+            <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
+              <span class="material-symbols-outlined text-4xl" data-icon="local_florist" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+            </div>
+            <h3 class="font-label-md text-label-md text-on-surface text-lg mb-2">Real Rose Aroma</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Infused with natural rose extracts for an authentic, floral tasting experience.</p>
+          </div>
+          <!-- Benefit 3 -->
+          <div class="glass-card rounded-xl p-8 flex flex-col items-center text-center transform transition-transform hover:-translate-y-2">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined text-4xl" data-icon="ac_unit" data-weight="fill" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
+            </div>
+            <h3 class="font-label-md text-label-md text-on-surface text-lg mb-2">Instant Refreshment</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Served chilled, it's the perfect thirst quencher for hot days or whenever you need a lift.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ingredients Section -->
+      <section id="ingredients" class="py-section-gap bg-white/50 relative">
+        <div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col md:flex-row items-center gap-16">
+          <div class="md:w-1/2 w-full h-[500px] rounded-3xl overflow-hidden shadow-lg relative">
+            <div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A highly detailed, photorealistic macro shot of fresh, vibrant pink rose petals gently falling into a pool of creamy, rich milk. The splash is frozen in time, capturing the dynamic movement." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOJg3uHpcreZj0ugBAgvpGL_mzh8iPYeowZnaIEnWs8BQPoNrm9ji6Hf0nm2YXWebHU27P0WN_NCzbTiUynCtB2PVmnm3s7x2HCknvpavasj398RQazbpRBe7YcbETWoP1Obhsv512LrnHaummxjXYsFMrKj_pBsy_izCzRupCDVHPmdfeaCSpySS7b-JdtI8JxpZgO_NtgjKesQO-6GaXa7dsuvICPbz06V6ryrNc4pYWtaWV5OIoKBU6-yGmzm9sn85Kn4z-p-gx')"></div>
+          </div>
+          <div class="md:w-1/2 space-y-8">
+            <div>
+              <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Nature's Finest Ingredients</h2>
+              <div class="w-20 h-1 bg-secondary rounded-full"></div>
+            </div>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              We believe that a premium beverage starts with premium ingredients. Amul Kool Gold Exotic Rose is a testament to this philosophy.
+            </p>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                </div>
+                <div>
+                  <h4 class="font-label-md text-label-md text-on-surface">Fresh Farm Milk</h4>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-1">Sourced directly from trusted farmers, ensuring the highest quality base for our drink.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 mt-1">
+                  <span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                </div>
+                <div>
+                  <h4 class="font-label-md text-label-md text-on-surface">Premium Rose Extract</h4>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-1">Carefully selected rose petals are used to extract the pure, delicate flavor that defines our beverage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Callout (Gold) -->
+      <section class="py-24 bg-gradient-to-r from-secondary/10 via-secondary/20 to-secondary/10 border-y border-secondary/30 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center px-container-margin-mobile relative z-10">
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary-fixed-dim drop-shadow-md mb-6">The 'Gold' Standard of Refreshment</h2>
+          <p class="font-body-lg text-body-lg text-on-surface max-w-2xl mx-auto">
+            More than just flavored milk, Amul Kool Gold is an experience. The rich texture and authentic taste set a new benchmark for premium dairy beverages. Treat yourself to the gold standard today.
+          </p>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="py-section-gap px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center text-on-surface mb-16">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="glass-card p-8 rounded-2xl relative">
+            <span class="material-symbols-outlined absolute top-4 left-4 text-primary/20 text-6xl" data-icon="format_quote">format_quote</span>
+            <p class="font-body-md text-body-md text-on-surface-variant italic relative z-10 mb-6">"The rose flavor is incredibly authentic, not artificial at all. It's my go-to drink when I need a refreshing pick-me-up in the afternoon."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-cover bg-center shadow-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALVXbSAlYqO-hEPtwsYG1ptKJ-eEzHaPKPYqxb7pbIDLnbIY4gRdZn3vO5MdFX9CPozM-ACPq702W3Fvf5dFq5KNi2-kSsklSsVXL2lOP-VhV7BSeQzMEQjQs4A_FUklA-iBX1S-ONG6TDGPAPNeIa2i2f64jftKIsGmgeqwVtMDxtHQ430berOCTEa63AN19HzkUh-xixKqkKQeJzZSNKjU1sWFkIPh_cDMK4k8ljTRKFQztV85TWIAHMFdYWGgx4x8AM1tTjBoyI')"></div>
+              <div>
+                <p class="font-label-md text-label-md text-on-surface">Priya S.</p>
+                <div class="flex text-secondary text-sm">
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-8 rounded-2xl relative mt-8 md:mt-12">
+            <span class="material-symbols-outlined absolute top-4 left-4 text-primary/20 text-6xl" data-icon="format_quote">format_quote</span>
+            <p class="font-body-md text-body-md text-on-surface-variant italic relative z-10 mb-6">"I love the creamy texture of the milk combined with the floral notes. It feels like a premium indulgence every time I open a bottle."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-cover bg-center shadow-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBprWYyzgA5PjX9qYXbRTun-rGphOmpD--XvWxRo4EMWG0bmz7JIOfS0rvEqYF38p1wnbjgs6-93FqWanY8mSClztv8GSfbooXSBN30L82CzA7K-rzh_vpaKEv2rctfyBUtDUhJLAWKT1hdPzMDatJ8N22dg_7sKMswsSfKNpEOyPSUwS_SojOvnPVjVjknaY7T_CQLNh2mim4WhKpNHEFeDKMhlvGA20nSWHVcpPOXntoQAS592ealtTqsPSNyO5BosjPCzrIyK-qo')"></div>
+              <div>
+                <p class="font-label-md text-label-md text-on-surface">Rahul M.</p>
+                <div class="flex text-secondary text-sm">
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-high dark:bg-surface-container-lowest full-width bottom-0 mt-20">
+      <div class="flex flex-col md:flex-row justify-between items-center w-full px-container-margin-mobile md:px-container-margin-desktop py-12 gap-8 max-w-7xl mx-auto">
+        <div class="font-headline-lg text-headline-lg font-bold text-primary">
+          Amul Kool Gold
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Privacy Policy</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Terms of Service</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Contact Us</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Store Locator</a>
+        </div>
+        <div class="text-on-surface dark:text-on-surface-variant font-body-md text-body-md text-center md:text-right">
+          © 2024 Amul Dairy. All rights reserved. The Taste of India.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
