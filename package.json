@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "mkdir -p dist && cp index.html style.css app.js dist/ && cp -r frames dist/"
+    "build": "echo 'Static site - no build step needed'"
   },
   "dependencies": {
     "express": "^4.19.2"

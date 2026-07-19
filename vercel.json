@@ -1,5 +1,7 @@
 {
-  "outputDirectory": "dist",
+  "framework": null,
+  "buildCommand": "exit 0",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
