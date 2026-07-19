@@ -4,7 +4,9 @@
   "description": "Amul Scroll Animation website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Static build - no compilation needed'"
   },
   "dependencies": {
     "express": "^4.19.2"
